@@ -1,0 +1,18 @@
+<script>
+    alert("You'll be shown 10 math problems and you've to solve all those as fast as possible in your head, got it?")
+    const startTime = Date.now()
+    let mistakesCount = 0
+
+    for (let i = 0; i < 10; i++) {
+        const a = Math.ceil(Math.random() * 99)
+        const b = Math.ceil(Math.random() * 99)
+
+        const answer = prompt(`What's ${a} + ${b}`)
+        if (a + b != answer) {
+            alert(`wrong answer 😒\n${a} + ${b} is ${a + b}`)
+            mistakesCount++
+        }
+    }
+
+    alert(`Your scors is ${(Date.now() - startTime) / 1000}s with ${mistakesCount} mistakes.\nLower is better`)
+</script>
